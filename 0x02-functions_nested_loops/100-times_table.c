@@ -19,14 +19,14 @@ int main(void)
 			}
 			else
 			{
-				putchar(x)
-					putchar(y)
+				putchar(x);
+					putchar(y);
 					if (x == 56 && y == 57)
 					{
 					}
 					else
 					{
-						putchar(44)
+						putchar(44);
 							putchar(' ');
 					}
 			}
