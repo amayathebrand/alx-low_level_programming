@@ -1,50 +1,37 @@
-#include "main.h"
+#include <studio.h">
 
 /**
- * print_times_table - Print the `n` times table, starting with 0.
- * Description: If `n` is greater than 15 or less than 0, print nothing.
- * @n: int type number
- */
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
 
-void print_times_table(int n)
+int main(void)
 {
-	int x = 0, y, z;
+	int x, y;
 
-	if (n > 15 || n < 0)
-		return;
-	while (x <= n)
+	for (x = 48; x <= 57; x++)
 	{
-		for (y = 0; y <= n; y++)
+		for (y = 48; y <= 57; y++)
 		{
-			z = x * y;
-			if (z > 99)
+			if (x == y || y <= x)
 			{
-				_putchar(z / 100 + '0');
-				_putchar((z / 10 % 10) + '0');
-				_putchar(z % 10 + '0');
-			}
-			else if (z > 9)
-			{
-				_putchar(' ');
-				_putchar(z / 10 + '0');
-				_putchar(z % 10 + '0');
-			}
-			_putchar(z % 10 + '0');
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(z + '0');
 			}
 			else
-				_putchar(z + '0');
-
-			if (y != n)
 			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar(x)
+					_putchar(y)
+					if (x == 56 && y == 57)
+					{
+					}
+					else
+					{
+						_putchar(44)
+							_putchar(' ');
+					}
 			}
 		}
-		_putchar('\n');
-		x++;
 	}
+	_putchar('\n');
+	return (0);
 }
