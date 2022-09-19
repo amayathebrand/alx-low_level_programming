@@ -1,37 +1,50 @@
 #include "main.h"
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
-*/
+ * print_times_table - prints time table
+ * @n : use in times table
+ * Return:void
+ */
 
-int main(void)
+void print_times_table(int n)
 {
-	int x, y;
+	int a = 0, rep, b;
 
-	for (x = 48; x <= 57; x++)
+	if (n < 0 || n > 15)
+		return;
+
+	while (a <= n)
 	{
-		for (y = 48; y <= 57; y++)
+		for (b = 0; b <= n; b++)
 		{
-			if (x == y || y <= x)
+			rep = a * b;
+			if (b == 0)
+				_putchar('0' + rep);
+			else if (rep < 10)
 			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + rep);
+			}
+			else if (rep < 100)
+			{
+				_putchar (' ');
+				_putchar('0' + rep / 10);
+				_putchar('0' + rep % 10);
 			}
 			else
 			{
-				putchar(x);
-				putchar(y);
-					if (x == 56 && y == 57)
-					{
-					}
-					else
-					{
-						putchar(44);
-						putchar(' ');
-					}
+				_putchar('0' + rep / 100);
+				_putchar('0' + (rep - 100) / 10);
+				_putchar('0' + rep % 10);
+			}
+			if (b < n)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
+		_putchar('\n');
+		a++;
 	}
-	putchar('\n');
-	return (0);
 }
